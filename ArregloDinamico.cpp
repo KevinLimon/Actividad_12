@@ -2,7 +2,7 @@
 
 ArregloDinamico::ArregloDinamico()
 {
-    ad = new int[MAX];
+    ad = new string[MAX];
     cont = 0;
     tamo = MAX;
 }
@@ -12,16 +12,12 @@ ArregloDinamico::~ArregloDinamico()
     delete[] ad;
 }
 
-
-
 void ArregloDinamico::insertar_final(const string &s)
 {
     if (cont==tamo){
         expandir();
     }
-    int t;
-    t = stoi(s);
-    ad[cont] = t;
+    ad[cont] = s;
     cont ++;
 }
 
@@ -34,9 +30,7 @@ void ArregloDinamico::insertar_inicio(const string &s)
     {
         ad[i] = ad[i-1];
     }
-    int t;
-    t = stoi(s);
-    ad[0] = t;
+    ad[0] = s;
     cont++;
 }
 
@@ -47,7 +41,7 @@ size_t ArregloDinamico::size()
 
 void ArregloDinamico::expandir()
 {
-    int *nv = new int[tamo+MAX];
+    string *nv = new string[tamo+MAX];
     for(size_t i=0;i <cont; i++){
         nv[i] = ad[i];
     }

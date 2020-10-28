@@ -5,14 +5,23 @@ using namespace std;
 
 int main(){
     ArregloDinamico ad;
-    ad.insertar_final("Hola");
-    ad.insertar_final("Buenas");
-    ad.insertar_final("Noches");
-    ad.insertar_final("Adios");
-    ad.insertar_inicio("Chocolate");
-    ad.insertar_inicio("Paletas");
+    ad.insertar_final("No");
+    ad.insertar_final("Se");
+    ad.insertar_final("Que");
+    ad.insertar_final("Insertar");
+    ad.insertar_final("En");
+    ad.insertar_final("Estas");
+    ad.insertar_final("Cadenas");
+    ad.insertar_final("Ayuda");
+    ad.insertar_inicio("Primeros");
+    ad.insertar_inicio("Strings");
 
-
+    for (size_t i = 0; i < ad.size(); i++)
+    {
+        cout<<ad[i]<<" ";
+    }
+    
 
     return 0;
 }
+
