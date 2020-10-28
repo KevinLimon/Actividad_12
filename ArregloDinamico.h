@@ -7,8 +7,7 @@ using namespace std;
 class ArregloDinamico
 {
     int *ad ;
-    string dato;
-    size_t tamaño;
+    size_t tamo;
     size_t cont;
     const static size_t MAX = 10;
 
@@ -17,6 +16,11 @@ public:
     ~ArregloDinamico();
     void insertar_final(const string &s);
     void insertar_inicio(const string &s);
+    size_t size();
+    int operator[](size_t a)
+    {
+        return ad[a];
+    }
 private:
     void expandir();
 };
