@@ -13,8 +13,8 @@ int main(){
     ad.insertar_final("Estas");
     ad.insertar_final("Cadenas");
     ad.insertar_final("Ayuda");
-    ad.insertar_inicio("Primeros");
     ad.insertar_inicio("Strings");
+    ad.insertar_inicio("Primeros");
 
     for (size_t i = 0; i < ad.size(); i++)
     {
