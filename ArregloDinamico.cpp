@@ -25,6 +25,21 @@ void ArregloDinamico::insertar_final(const string &s)
     cont ++;
 }
 
+void ArregloDinamico::insertar_inicio(const string &s)
+{
+    if (cont==tamaño){
+        expandir();
+    }
+    for (size_t i=cont; i>0;i--)
+    {
+        ad[i] = ad[i-1];
+    }
+    int t;
+    t = stoi(s);
+    ad[0] = t;
+    cont++;
+}
+
 void ArregloDinamico::expandir()
 {
     int *nv = new int[tamaño+MAX];
